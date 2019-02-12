@@ -12,6 +12,7 @@ public abstract class RestRequest {
     }
 
     public abstract String execute() throws IOException;
+    public abstract String execute(String body) throws IOException;
 
     private void setRequiredHeaders() {
         // I want json returned

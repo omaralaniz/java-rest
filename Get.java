@@ -7,11 +7,17 @@ public class Get extends RestRequest {
     connection.setRequestMethod("GET");
   }
 
+  @Override
   public String execute() throws IOException {
       Response response = new Response( connection );
 
       connection.disconnect();
 
       return response.getBody();
+  }
+
+  @Override
+  public String execute(String body) throws IOException {
+    return this.execute();
   }
 }
